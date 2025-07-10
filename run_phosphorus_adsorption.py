@@ -18,7 +18,7 @@ def classify_soil(texture):
     elif texture in sandy:
         return "Sandy"
     else:
-        return "Unknown"  # Or np.nan if you prefer
+        return "Unknown"
 
 # Apply the function to create a new column
 df['Soil Classification'] = df['Soil texture'].apply(classify_soil)
@@ -134,7 +134,3 @@ df_expanded['PFP6'] = round(df_expanded['XGBoost_6ppm_adsorbed']*100/df_expanded
 df_expanded['PFP10'] = round(df_expanded['XGBoost_10ppm_adsorbed']*100/df_expanded['10ppm_applied'],1)
 
 df_expanded.to_excel(f'final_output_percentage_adsorption.xlsx', index=False)
-
-
-
-
