@@ -3,7 +3,7 @@
 ## Overview
 
 This repository contains the code and analysis supporting the manuscript.  
-The data are available in the Zenodo repository: [10.5281/zenodo.15828513](https://doi.org/10.5281/zenodo.15828513).
+The data are available in the Zenodo repository: [10.5281/zenodo.15828513](https://doi.org/10.5281/zenodo.15854383).
 
 > **Machine Learning vs Langmuir: A Multioutput XGBoost Regressor Better Captures Soil Phosphorus Adsorption Dynamics**
 
@@ -20,7 +20,7 @@ Traditional models like the Langmuir isotherm have been widely used to describe 
 ## Repository Contents
 
 - `notebooks/`: Jupyter notebooks for data preprocessing, modeling, and evaluation.
-- `data/`: Datasets are available on Zenodo: [10.5281/zenodo.15828513](https://doi.org/10.5281/zenodo.15828513).
+- `data/`: Datasets are available on Zenodo: [10.5281/zenodo.15828513](https://doi.org/10.5281/zenodo.15854383).
 - `figures/`: Plots comparing observed vs predicted values and feature importances.
 - `src/`: Core Python scripts for model training and validation.
 - `multioutput_xgb_model.pkl`: Trained multi-output XGBoost model (serialized with joblib).
