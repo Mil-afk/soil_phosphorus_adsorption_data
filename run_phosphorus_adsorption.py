@@ -1,5 +1,6 @@
 import joblib
 import pandas as pd
+import xgboost as xgb
 
 url = "https://zenodo.org/record/15854383/files/MEGADATA.xlsx"
 df = pd.read_excel(url)
@@ -59,8 +60,20 @@ df_expanded['Mg'] = df_expanded['Mg'] / (12.1525 * 10)
 
 X_input = df_expanded[['S', 'C', 'pH', 'EC', 'Organic matter', 'P', 'Mg', 'Mn', 'Cu']]
 
+# Initialize an XGBRegressor model with native multi-output support
+model_multi = xgb.XGBRegressor(n_estimators=257,
+                     learning_rate=0.13746153625886032,
+                     tree_method="hist",
+                     multi_strategy="multi_output_tree",
+                     max_depth= 8,
+                     min_child_weight = 2,
+                     subsample= 0.8575279805203573,
+                     colsample_bytree = 0.8978546705230994,
+                     gamma = 2.4634384973190855,
+                     random_state=42)
+
 # Load the model
-model_multi = joblib.load('multioutput_xgb_model.pkl')
+model_multi.load_model("multioutput_xgb_model.json")
 
 # predict phosphorus adsorption for the extended dataset
 y_pred = model_multi.predict(X_input)
