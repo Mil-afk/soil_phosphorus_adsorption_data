@@ -34,3 +34,10 @@ Install dependencies with:
 
 ```bash
 pip install -r requirements.txt
+
+## Citation
+
+If you use this repository in your work, please cite:
+Iatrou, M.; Papadopoulos, A. Machine Learning vs. Langmuir: A Multioutput XGBoost Regressor Better Captures Soil Phosphorus Adsorption Dynamics. Crops 2025, 5, 55. https://doi.org/10.3390/crops5040055
+
+
