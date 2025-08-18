@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 ---
 
-Citation
+## Citation
 
 If you use this repository in your work, please cite:
 
